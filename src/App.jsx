@@ -1,5 +1,16 @@
 import "./index.css";
+import { useSuccessContext } from "./context";
+import { SignUp, Success } from "./pages";
 
 export default function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  // const { setSuccess } = useSuccessContext();
+
+  return (
+    <>
+      <Success />
+      {/* <section className="flex justify-center items-center bg-charcoalGrey min-h-screen">
+        <SignUp />
+      </section> */}
+    </>
+  );
 }
