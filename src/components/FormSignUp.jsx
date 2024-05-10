@@ -1,8 +1,16 @@
+import { useState } from "react";
 import useFormFunctionality from "./useFormFunctionality";
+import { Success } from "../pages";
 
 const FormSignUp = () => {
   const { isError, email, setEmail, handleButtonClick, handleFormSubmit } =
     useFormFunctionality();
+
+    const [submitted, setSubmitted] = useState(false);
+
+    if (submitted) {
+      return <Success />; // Render Success component if form is submitted
+    }
 
   return (
     <div>
